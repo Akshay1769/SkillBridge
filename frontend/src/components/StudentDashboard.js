@@ -1,5 +1,6 @@
 import { useAuth } from "@clerk/clerk-react";
 import { useState } from "react";
+import "./index.css";
 
 export default function StudentDashboard() {
   const { getToken } = useAuth();
