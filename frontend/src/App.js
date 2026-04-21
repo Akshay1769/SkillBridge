@@ -32,7 +32,7 @@ function App() {
     };
 
     fetchUser();
-  }, [isLoaded, isSignedIn]);
+  }, [isLoaded, isSignedIn, getToken]);
 
   const handleRoleSelect = async (role) => {
     const token = await getToken();
