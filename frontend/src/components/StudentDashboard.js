@@ -59,7 +59,7 @@ export default function StudentDashboard() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Student Dashboard</h2>
 
       <button onClick={markAttendance}>Mark Attendance</button>
@@ -67,7 +67,10 @@ export default function StudentDashboard() {
 
       <br /><br />
 
-      <h3>Join Batch</h3>
+        <div className="section">
+        <h3>Join Batch</h3> 
+        
+      
       <input
         type="text"
         placeholder="Enter invite code"
@@ -75,11 +78,11 @@ export default function StudentDashboard() {
         onChange={(e) => setInviteCode(e.target.value)}
       />
       <button onClick={joinBatch}>Join</button>
-
+        </div>
       {joinMsg && <p>{joinMsg}</p>}
 
       {batchData && (
-        <div>
+        <div className="card">
           <p>Batch Name: {batchData.name}</p>
           <p>Invite Code: {batchData.invite_code}</p>
         </div>

@@ -1,6 +1,6 @@
 export default function RoleSelection({ onSelect }) {
   return (
-    <div>
+    <div className="container">
       <h2>Select Your Role</h2>
 
       <button onClick={() => onSelect("Student")}>Student</button>

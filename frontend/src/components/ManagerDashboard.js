@@ -23,7 +23,7 @@ export default function ManagerDashboard() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Programme Manager Dashboard</h2>
 
       <button onClick={fetchProgrammeSummary}>

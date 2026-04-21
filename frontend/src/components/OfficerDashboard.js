@@ -23,7 +23,7 @@ export default function OfficerDashboard() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Monitoring Officer Dashboard</h2>
       <h4>Read-only access</h4>
 

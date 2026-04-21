@@ -93,7 +93,7 @@ const createBatch = async () => {
 
 
   return (
-    <div>
+    <div className="container">
       <h2>Trainer Dashboard</h2>
       <br/>
       <h3>Create Session</h3>
@@ -123,8 +123,9 @@ const createBatch = async () => {
 {sessionMsg && <p>{sessionMsg}</p>}
 
       <br /><br />
-
-      <h3>Create Batch</h3>
+      <div className="section">
+        <h3>Create Batch</h3>
+      
     <input
         type="text"
         placeholder="Enter batch name"
@@ -136,8 +137,10 @@ const createBatch = async () => {
 
          {batchMsg && <p>{batchMsg}</p>}
 
+         </div>
+
        {batchData && (
-         <div>
+         <div className="card">
            <p>Batch Name: {batchData.name}</p>
            <p>Invite Code: {batchData.invite_code}</p>
          </div>

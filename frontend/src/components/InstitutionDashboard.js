@@ -38,7 +38,7 @@ export default function InstitutionDashboard() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Institution Dashboard</h2>
 
       <button onClick={fetchBatches}>View All Batches</button>
