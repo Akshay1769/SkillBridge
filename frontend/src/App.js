@@ -37,7 +37,7 @@ function App() {
   const handleRoleSelect = async (role) => {
     const token = await getToken();
 
-    const res = await fetch("`${process.env.REACT_APP_API_URL}/api/users/sync-user`", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/api/users/sync-user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
