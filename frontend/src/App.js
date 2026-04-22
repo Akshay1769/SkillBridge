@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { useAuth, useUser, SignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 import StudentDashboard from "./components/StudentDashboard";
 import TrainerDashboard from "./components/TrainerDashboard";
@@ -12,6 +12,7 @@ function App() {
   const { user: clerkUser } = useUser();
 
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!isLoaded || !isSignedIn) return;

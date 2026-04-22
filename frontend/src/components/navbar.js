@@ -1,7 +1,6 @@
-import { useUser, useClerk } from "@clerk/clerk-react";
+import { useClerk } from "@clerk/clerk-react";
 
 export default function Navbar({ role }) {
- UseUser();
   const { signOut } = useClerk();
 
   return (
