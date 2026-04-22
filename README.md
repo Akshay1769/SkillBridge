@@ -3,7 +3,8 @@
 
 ## URLs :
 
-Frontend Url - skill-bridge-sigma-wine.vercel.app
+Frontend Url - https://skill-bridge-sigma-wine.vercel.app
+
 Backend Url - https://skillbridge-stmn.onrender.com
 
 ## Test accounts :
@@ -11,9 +12,13 @@ Backend Url - https://skillbridge-stmn.onrender.com
 ->Log in using these demo accounts or create a new one
 
 Student → student@gmail.com / skillbridge
+
 Trainer → trainer@gmail.com / skillbridge
+
 Institution → institution@gmail.com / skillbridge
+
 Programme Manager → manager@gmail.com / skillbridge
+
 Monitoring Officer → officer@gmail.com / skillbridge
 
 ## run on localhost :
@@ -26,7 +31,9 @@ Monitoring Officer → officer@gmail.com / skillbridge
 
 => .env
 SUPABASE_URL=supabase_url
+
 SUPABASE_KEY=supabase_key
+
 CLERK_SECRET_KEY=clerk_secret_key
 
 => Run
@@ -49,12 +56,16 @@ npm start
 ## Database Schema :
 
 -Users table : stores role and links Clerk user ID
+
 -Batches : represent groups of students within an institution
+
 -Sessions belong to batches and are created by trainers
+
 -Attendance tracks student presence per session
+
 -Many-to-many relationships handled using:
-      -batch_students
-      -batch_trainers
+      -> batch_students
+      -> batch_trainers
 
       
 
@@ -80,24 +91,33 @@ Backend → Render
 
 !! 
 
-Clerk simplifies secure authentication(used before)
-Supabase provides easy relational database setup(used before)
-Express allows flexible API design(used in previous projects)
+-> Clerk simplifies secure authentication(used before)
+
+-> Supabase provides easy relational database setup(used before)
+
+-> Express allows flexible API design(used in previous projects)
 
 
 ## Fully Working
 
 Authentication with Clerk
+
 Role-based dashboards
+
 Batch creation and invite system
+
 Session creation
+
 Attendance marking
+
 Attendance viewing
+
 Programme-level summary
 
 ## Not implemented
-Separate /batches/:id/invite endpoint (handled in batch creation)
-/institutions/:id/summary endpoint
+-> Separate /batches/:id/invite endpoint (handled in batch creation)
+
+-> /institutions/:id/summary endpoint
 
 
 ## Improvements
