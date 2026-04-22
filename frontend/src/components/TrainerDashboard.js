@@ -37,7 +37,7 @@ export default function TrainerDashboard() {
   useEffect(() => {
     fetchBatches();
     fetchSessions();
-  }, []);
+  }, [getToken]);
 
   const createSession = async () => {
     const token = await getToken();

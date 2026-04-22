@@ -6,14 +6,12 @@ import TrainerDashboard from "./components/TrainerDashboard";
 import InstitutionDashboard from "./components/InstitutionDashboard";
 import ManagerDashboard from "./components/ManagerDashboard";
 import OfficerDashboard from "./components/OfficerDashboard";
-import RoleSelection from "./components/RoleSelection";
 
 function App() {
   const { getToken, isLoaded, isSignedIn } = useAuth();
   const { user: clerkUser } = useUser();
 
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!isLoaded || !isSignedIn) return;
