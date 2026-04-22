@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAuth, useUser, SignedIn,} from "@clerk/clerk-react";
+import { useAuth, useUser, SignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 import StudentDashboard from "./components/StudentDashboard";
 import TrainerDashboard from "./components/TrainerDashboard";
 import InstitutionDashboard from "./components/InstitutionDashboard";
@@ -65,18 +65,22 @@ function App() {
 
   return (
     <>
-<SignedIn>
-  {loading ? (
-    <p>Loading...</p>
-  ) : !user ? (
-    <RoleSelection onSelect={handleRoleSelect} />
-  ) : (
-    <>
-      <Navbar role={user.role} />
-      {renderDashboard()}
-    </>
-  )}
-</SignedIn>
+      <SignedOut>
+        <SignIn />
+      </SignedOut>
+
+      <SignedIn>
+        {loading ? (
+          <p>Loading...</p>
+        ) : !user ? (
+          <RoleSelection onSelect={handleRoleSelect} />
+        ) : (
+          <>
+            <Navbar/>
+            {renderDashboard()}
+          </>
+        )}
+      </SignedIn>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { useClerk } from "@clerk/clerk-react";
 
-export default function Navbar({ role }) {
+export default function Navbar() {
   const { signOut } = useClerk();
 
   return (
@@ -8,7 +8,6 @@ export default function Navbar({ role }) {
       <div className="nav-left">SkillBridge</div>
 
       <div className="nav-right">
-        <span>{role}</span>
         <button onClick={() => signOut()}>Logout</button>
       </div>
     </div>
