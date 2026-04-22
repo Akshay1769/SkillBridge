@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import { useAuth, useUser, SignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 import StudentDashboard from "./components/StudentDashboard";
 import TrainerDashboard from "./components/TrainerDashboard";
