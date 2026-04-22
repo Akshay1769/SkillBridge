@@ -6,6 +6,7 @@ import InstitutionDashboard from "./components/InstitutionDashboard";
 import ManagerDashboard from "./components/ManagerDashboard";
 import OfficerDashboard from "./components/OfficerDashboard";
 import RoleSelection from "./components/RoleSelection";
+import Navbar from "./components/Navbar";
 
 function App() {
   const { getToken, isLoaded, isSignedIn } = useAuth();
@@ -64,19 +65,18 @@ function App() {
 
   return (
     <>
-      <SignedOut>
-        <SignIn />
-      </SignedOut>
-
-      <SignedIn>
-        {loading ? (
-          <p>Loading...</p>
-        ) : !user ? (
-          <RoleSelection onSelect={handleRoleSelect} />
-        ) : (
-          renderDashboard()
-        )}
-      </SignedIn>
+<SignedIn>
+  {loading ? (
+    <p>Loading...</p>
+  ) : !user ? (
+    <RoleSelection onSelect={handleRoleSelect} />
+  ) : (
+    <>
+      <Navbar role={user.role} />
+      {renderDashboard()}
+    </>
+  )}
+</SignedIn>
     </>
   );
 }
