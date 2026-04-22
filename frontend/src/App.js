@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
 import { useAuth, useUser, SignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 import StudentDashboard from "./components/StudentDashboard";
 import TrainerDashboard from "./components/TrainerDashboard";
@@ -69,13 +70,14 @@ function App() {
       </SignedOut>
 
       <SignedIn>
-        {loading ? (
-          <p>Loading...</p>
-        ) : !user ? (
-          <RoleSelection onSelect={handleRoleSelect} />
-        ) : (
-          renderDashboard()
-        )}
+        {!user ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+      <Navbar role={user.role} />
+      {renderDashboard()}
+     </>
+      )}
       </SignedIn>
     </>
   );
