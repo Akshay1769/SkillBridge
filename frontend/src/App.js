@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAuth, useUser, SignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
+import { useAuth, useUser, SignedIn,} from "@clerk/clerk-react";
 import StudentDashboard from "./components/StudentDashboard";
 import TrainerDashboard from "./components/TrainerDashboard";
 import InstitutionDashboard from "./components/InstitutionDashboard";
